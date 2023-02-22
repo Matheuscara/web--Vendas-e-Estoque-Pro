@@ -1,0 +1,76 @@
+.container__tab-lateral {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0px 6px 80px rgba(0, 0, 0, 5%);
+
+  .top {
+    margin-top: 15px;
+    width: 100%;
+    .logo {
+      margin-bottom: 50px;
+    }
+
+    .categorias {
+      div {
+        margin-bottom: 50px;
+
+        img {
+          padding: 10px;
+          background-color: #fbfafe;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    .user {
+      border: 3px solid #5f30e2;
+      border-radius: 50%;
+    }
+
+    .section {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .logout {
+        background-color: white;
+      }
+
+      img {
+        margin-bottom: 25px;
+        padding: 10px;
+        background-color: #fbfafe;
+      }
+    }
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 20px;
+  left: 78px;
+
+  img {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fbfafe;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    width: 18px;
+    padding: 3px;
+  }
+
+  .section {
+    display: none;
+  }
+}

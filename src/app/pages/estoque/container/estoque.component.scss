@@ -1,0 +1,91 @@
+.container__estoque {
+  margin-left: 90px;
+
+  .header {
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c7c9d9;
+
+    .left {
+      h4 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #28293d;
+        margin: 0px 0px 10px 0px;
+      }
+
+      span {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        color: #555770;
+      }
+    }
+
+    .right {
+      padding: 12px 20px;
+      width: auto;
+      background: #5f30e2;
+      border-radius: 4px;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      display: flex;
+      text-align: right;
+      color: #ffffff;
+      align-items: center;
+      border: none;
+      img {
+        margin-right: 5px;
+      }
+    }
+
+    .button {
+      transition: 0.5s;
+    }
+
+    .button:hover {
+      background: #7851e2;
+    }
+  }
+
+  .section-title {
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 2px;
+      color: #28293d;
+    }
+
+    button {
+      background: #efeafc;
+      border-radius: 4px;
+      padding: 12px 20px;
+      font-size: 14px;
+      color: #5f30e2;
+      border: none;
+      transition: 0.5s;
+    }
+
+    button:hover {
+      background: #e6dcff;
+    }
+  }
+}
