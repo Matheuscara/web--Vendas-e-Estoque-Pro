@@ -88,18 +88,18 @@
     <tbody>
       <tr
         [ngClass]="{ 'linha-par': i % 2 === 0, 'linha-impar': i % 2 !== 0 }"
-        *ngFor="let produto of mockProdutos; let i = index"
+        *ngFor="let produto of produtos; let i = index"
       >
         <td class="codigo">
-          <a>{{ produto.codigo }}</a>
+          <a>#{{ produto.id }}</a>
         </td>
         <td class="nome">{{ produto.nome }}</td>
         <td>{{ produto.categoria }}</td>
-        <td>{{ produto.quantidade }}</td>
-        <td>{{ produto.qtdMinima }}</td>
-        <td>{{ produto.ValorCompra }}</td>
-        <td>{{ produto.ValorVenda }}</td>
-        <td>{{ produto.Entrada }}</td>
+        <td>{{ produto.quantidade }} Unit</td>
+        <td>{{ produto.qtdMinima }} Unit</td>
+        <td>R$ {{ produto.valorCompra }}</td>
+        <td>R$ {{ produto.valorVenda }}</td>
+        <td>{{ produto.data_cadastro }}</td>
       </tr>
     </tbody>
   </table>
