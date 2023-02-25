@@ -68,7 +68,6 @@
       font-family: "Roboto";
       font-style: normal;
       font-weight: 400;
-      font-size: 20px;
       line-height: 20px;
       letter-spacing: 2px;
       color: #28293d;
@@ -86,6 +85,90 @@
 
     button:hover {
       background: #e6dcff;
+    }
+  }
+
+  .table {
+    padding: 0px 40px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+
+    tr {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    th {
+      width: 12.5%;
+      padding: 18px 20px;
+      text-align: initial;
+      color: #8f90a6;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      display: flex;
+
+      img {
+        padding-left: 3px;
+      }
+
+      @media screen and (max-width: 1600px) {
+        font-size: 1vw;
+
+        img {
+          width: 0.4vw;
+        }
+      }
+
+      @media screen and (min-width: 1600px) {
+        font-size: 14px;
+
+        img {
+          width: 7.19px;
+          height: 14.45px;
+        }
+      }
+    }
+
+    td {
+      width: 12.5%;
+      text-align: initial;
+      padding: 18px 20px;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+
+      @media screen and (max-width: 1600px) {
+        font-size: 1.1vw;
+      }
+
+      @media screen and (min-width: 1600px) {
+        font-size: 15px;
+      }
+    }
+
+    .linha-par {
+      background: #fbfafe;
+    }
+
+    .linha-impar {
+      background-color: white;
+    }
+
+    .nome {
+      min-width: 15%;
+    }
+
+    .codigo {
+      max-width: 6%;
     }
   }
 }

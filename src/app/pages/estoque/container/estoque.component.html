@@ -1,24 +1,105 @@
 <app-tab-lateral [marginTop]="'100'"></app-tab-lateral>
 <div class="container__estoque">
-
-    <div class="header">
-        <div class="left">
-            <h4 class="h4_24px">Gerenciamento de Estoque</h4>
-            <span>Informacoes sobre seu estoque atualmente</span>
-        </div>
-
-        <button class="right button">
-            <img src="../../../../assets/svg/mais.svg" width="12px" alt="mais-icon" />
-            Adicionar Produtos
-        </button>
+  <div class="header">
+    <div class="left">
+      <h4 class="h4_24px">Gerenciamento de Estoque</h4>
+      <span>Informacoes sobre seu estoque atualmente</span>
     </div>
 
-    <div class="section-title">
-        <h3>Produtos</h3>
-        <button>
-            <img src="../../../../assets/svg/filter.svg" width="12px" alt="filter-icon" />
-            Filtrar
-        </button>
-    </div>
+    <button class="right button">
+      <img src="../../../../assets/svg/mais.svg" width="12px" alt="mais-icon" />
+      Adicionar Produtos
+    </button>
+  </div>
 
-</div>
+  <div class="section-title">
+    <h3>Produtos</h3>
+    <button>
+      <img
+        src="../../../../assets/svg/filter.svg"
+        width="12px"
+        alt="filter-icon"
+      />
+      Filtrar
+    </button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="codigo">
+          Codigo
+          <img
+            src="../../../../assets/svg/categorias-tabela-setas.svg"
+            alt="categorias-tabela-setas"
+          />
+        </th>
+        <th class="nome">
+          Nome
+          <img
+            src="../../../../assets/svg/categorias-tabela-setas.svg"
+            alt="categorias-tabela-setas"
+          />
+        </th>
+        <th>
+          Categoria
+          <img
+            src="../../../../assets/svg/categorias-tabela-setas.svg"
+            alt="categorias-tabela-setas"
+          />
+        </th>
+        <th>
+          Quantidade
+          <img
+            src="../../../../assets/svg/categorias-tabela-setas.svg"
+            alt="categorias-tabela-setas"
+          />
+        </th>
+        <th>
+          Qtd minima
+          <img
+            src="../../../../assets/svg/categorias-tabela-setas.svg"
+            alt="categorias-tabela-setas"
+          />
+        </th>
+        <th>
+          Valor Compra
+          <img
+            src="../../../../assets/svg/categorias-tabela-setas.svg"
+            alt="categorias-tabela-setas"
+          />
+        </th>
+        <th>
+          Valor Venda
+          <img
+            src="../../../../assets/svg/categorias-tabela-setas.svg"
+            alt="categorias-tabela-setas"
+          />
+        </th>
+        <th>
+          Entrada
+          <img
+            src="../../../../assets/svg/categorias-tabela-setas.svg"
+            alt="categorias-tabela-setas"
+          />
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        [ngClass]="{ 'linha-par': i % 2 === 0, 'linha-impar': i % 2 !== 0 }"
+        *ngFor="let produto of mockProdutos; let i = index"
+      >
+        <td class="codigo">
+          <a>{{ produto.codigo }}</a>
+        </td>
+        <td class="nome">{{ produto.nome }}</td>
+        <td>{{ produto.categoria }}</td>
+        <td>{{ produto.quantidade }}</td>
+        <td>{{ produto.qtdMinima }}</td>
+        <td>{{ produto.ValorCompra }}</td>
+        <td>{{ produto.ValorVenda }}</td>
+        <td>{{ produto.Entrada }}</td>
+      </tr>
+    </tbody>
+  </table>
