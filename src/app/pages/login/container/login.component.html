@@ -1,0 +1,45 @@
+<img
+  class="logo"
+  src="../../../../assets/svg/logo.svg"
+  width="60px"
+  alt="Logo"
+/>
+<div class="login_container">
+  <div class="left">
+    <p class="title">Entre no melhor time de gerencia</p>
+    <p class="subtitle">Comece de algum lugar ;)</p>
+    <div>
+      <span>Se voce nao tiver uma conta</span>
+      <span>Voce pode <a>se cadastrar!</a></span>
+    </div>
+    <img src="../../../../assets/svg/persona-login.svg" alt="" />
+  </div>
+
+  <div class="right">
+    <div *ngIf="stateLogin" class="login">
+      Login
+      <div>
+        <input type="text" [(ngModel)]="email" placeholder="E-mail" />
+        <input type="password" [(ngModel)]="senha" placeholder="Senha" />
+
+        <span>Esqueceu a senha?</span>
+
+        <button (click)="login()">Login</button>
+        <button (click)="stepCadatrar()" class="cadastrar">Cadastre-se</button>
+      </div>
+    </div>
+    <div *ngIf="!stateLogin">
+      Cadastre-se
+      <div>
+        <input type="text" [(ngModel)]="nome" placeholder="Nome" />
+        <input type="email" [(ngModel)]="email" placeholder="E-mail" />
+        <input type="password" [(ngModel)]="senha" placeholder="Senha" />
+
+        <span></span>
+
+        <button (click)="cadastrar()">Cadastre-se</button>
+        <button (click)="stepLogin()" class="voltarLogin">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>

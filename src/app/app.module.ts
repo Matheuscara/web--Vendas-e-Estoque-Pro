@@ -7,6 +7,9 @@ import { EstoqueModule } from './pages/estoque/Estoque.module';
 import { StoreModule } from '@ngrx/store';
 import { produtosReducer } from './shared/state/reducer';
 import { HttpClientModule } from '@angular/common/http';
+import { LocalStorageService } from 'ngx-webstorage';
+import { VendasModule } from './pages/vendas/Estoque.module';
+import { LoginModule } from './pages/login/Login.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,8 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
       produtos: produtosReducer
     }),
   ],
-  exports: [RouterModule, EstoqueModule],
-  providers: [],
+  exports: [RouterModule, EstoqueModule, VendasModule, LoginModule],
+  providers: [LocalStorageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

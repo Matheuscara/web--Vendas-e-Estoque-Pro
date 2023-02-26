@@ -99,7 +99,7 @@
         <td>{{ produto.qtdMinima }} Unit</td>
         <td>R$ {{ produto.valorCompra }}</td>
         <td>R$ {{ produto.valorVenda }}</td>
-        <td>{{ produto.data_cadastro }}</td>
+        <td class="dataCadastro"> {{ formaterDate(produto.data_cadastro) }}</td>
       </tr>
     </tbody>
   </table>

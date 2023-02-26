@@ -8,12 +8,14 @@ export class EstoqueService {
   constructor(private http: HttpClient) {}
 
   public getProdutos() {
+    const token = localStorage.getItem('token');
+    
     const headers = new HttpHeaders({
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE2NzczNTE0MDcsImV4cCI6MTY3NzM1NTAwN30.UI2zNemCKd1TYyqZqeOomA8i1o27h_tACz7IWkEiXIM`,
+      Authorization: `Bearer ${token}`,
       accept: '*/*',
     });
 
-    return this.http.get('http://localhost:5000/usuario/consulta/1', {
+    return this.http.get('http://localhost:5000/usuario/consulta/produtos', {
       headers,
     });
   }

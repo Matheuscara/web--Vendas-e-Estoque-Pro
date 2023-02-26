@@ -1,0 +1,150 @@
+.logo {
+  margin: 40px;
+}
+
+.login_container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left {
+    position: relative;
+
+    .title {
+      margin: 0px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 75px;
+    }
+
+    .subtitle {
+      margin: 0px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 52px;
+    }
+
+    div {
+      margin-top: 70px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 550;
+      font-size: 15px;
+      line-height: 20px;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: #5f30e2;
+      }
+    }
+
+    img {
+      position: absolute;
+      right: -180px;
+      bottom: -650px;
+      z-index: -50;
+      animation: levitate 5s ease-in-out infinite; /* Duração da animação, tipo de animação e número de vezes que deve ser repetida */
+    }
+
+    @keyframes levitate {
+      0% {
+        transform: translate(-50%, -50%);
+      }
+      50% {
+        transform: translate(
+          -50%,
+          -51%
+        );
+      }
+      100% {
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .right {
+    margin: 100px 45px 0px 45px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+
+    input {
+      padding: 10px 20px;
+      border: none;
+      background: #f0efff;
+      border-radius: 8px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      color: #000000;
+      margin-top: 30px;
+      min-width: 300px;
+      outline: none;
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: #b0b0b0;
+      text-align: right;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 15px 28px;
+      border: none;
+      background-color: #4d47c3;
+      border-radius: 8px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: white;
+      margin-bottom: 15px;
+      transition: 1s;
+    }
+
+    button:hover {
+      background: #7851e2;
+    }
+
+    .cadastrar {
+      background-color: #f0efff;
+      color: #746eff;
+    }
+
+    .voltarLogin {
+      background-color: #f0efff;
+      color: #746eff;
+    }
+
+    .cadastrar:hover {
+      background-color: #d0cdff;
+    }
+
+
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

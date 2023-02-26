@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -9,30 +10,31 @@ import { AppState } from 'src/app/shared/state/reducer';
   templateUrl: './estoque.component.html',
   styleUrls: ['./estoque.component.scss'],
 })
-
 export class EstoqueComponent implements OnInit {
   produtos$: Observable<any>;
   produtos: any;
 
-  constructor(private store: Store<AppState>, private estoqueService: EstoqueService) {
+  constructor(
+    private store: Store<AppState>,
+    private estoqueService: EstoqueService,
+    private datePipe: DatePipe
+  ) {
     this.produtos$ = store.select('produtos');
 
     this.produtos$.subscribe((args) => {
-      this.produtos = args.produtos
-    })
+      this.produtos = args.produtos;
+    });
   }
 
   ngOnInit(): void {
-    this.estoqueService.getProdutos().subscribe(data => {
-      this.store.dispatch({ type: 'estoqueProdutos', payload: data })
-    })
+    this.estoqueService.getProdutos().subscribe((data) => {
+      this.store.dispatch({ type: 'estoqueProdutos', payload: data });
+    });
   }
 
-  increment() {
-    console.log(this.store)
-  }
-
-  decrement() {
-    this.store.dispatch({ type: 'DECREMENT' });
+  formaterDate(date: string) {
+    return this.datePipe
+      .transform(date, 'dd/MM/yyyy HH:mm:ss')
+      ?.replace(' ', ' - ');
   }
 }
