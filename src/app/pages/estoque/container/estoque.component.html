@@ -6,7 +6,7 @@
       <span>Informacoes sobre seu estoque atualmente</span>
     </div>
 
-    <button class="right button">
+    <button (click)="comportamentoModal()" class="right button">
       <img src="../../../../assets/svg/mais.svg" width="12px" alt="mais-icon" />
       Adicionar Produtos
     </button>
@@ -99,7 +99,13 @@
         <td>{{ produto.qtdMinima }} Unit</td>
         <td>R$ {{ produto.valorCompra }}</td>
         <td>R$ {{ produto.valorVenda }}</td>
-        <td class="dataCadastro"> {{ formaterDate(produto.data_cadastro) }}</td>
+        <td class="dataCadastro">{{ formaterDate(produto.data_cadastro) }}</td>
       </tr>
     </tbody>
   </table>
+
+  <app-modal-adicionar-produtos
+    [showModal]="modal"
+    (fecharModal)="comportamentoModal()"
+  ></app-modal-adicionar-produtos>
+</div>

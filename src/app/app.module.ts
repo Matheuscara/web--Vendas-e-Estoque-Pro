@@ -8,8 +8,8 @@ import { StoreModule } from '@ngrx/store';
 import { produtosReducer } from './shared/state/reducer';
 import { HttpClientModule } from '@angular/common/http';
 import { LocalStorageService } from 'ngx-webstorage';
-import { VendasModule } from './pages/vendas/Estoque.module';
 import { LoginModule } from './pages/login/Login.module';
+import { InputComponent } from './shared/components/input/input.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +21,7 @@ import { LoginModule } from './pages/login/Login.module';
       produtos: produtosReducer
     }),
   ],
-  exports: [RouterModule, EstoqueModule, VendasModule, LoginModule],
+  exports: [RouterModule, EstoqueModule, LoginModule],
   providers: [LocalStorageService],
   bootstrap: [AppComponent],
 })

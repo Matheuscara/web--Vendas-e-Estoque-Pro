@@ -1,0 +1,156 @@
+<div *ngIf="showModal" class="modal-container">
+  <div class="modal-content">
+    <div class="title">
+      Adicionar Produto
+      <button (click)="this.fecharModal.emit()">
+        <img src="../../../../assets/svg/fechar-modal.svg" alt="fechar-modal" />
+      </button>
+    </div>
+    <div class="linha"></div>
+    <div class="container_modal_inter">
+      <div class="form">
+        <label for="nome">
+          Nome
+          <input
+            type="text"
+            id="nome"
+            class="nome"
+            [(ngModel)]="nome"
+            placeholder="Digite o nome do produto"
+          />
+        </label>
+        <label for="categoria">
+          Categoria
+          <input
+            type="text"
+            id="categoria"
+            class="categoria"
+            [(ngModel)]="categoria"
+            placeholder="Digite a categoria do produto"
+          />
+        </label>
+        <div class="quantidadeInputs">
+          <label for="quantidade">
+            Quantidade
+            <div class="container_quantidade">
+              <div class="mais">
+                <img
+                  src="../../../../assets/svg/menor_modal.svg"
+                  alt="mais_modal"
+                  width="15"
+                />
+              </div>
+
+              <input
+                type="text"
+                id="quantidade"
+                class="quantidade"
+                [(ngModel)]="quantidade"
+                placeholder=""
+              />
+
+              <div class="mais">
+                <img
+                  src="../../../../assets/svg/mais_modal.svg"
+                  alt="mais_modal"
+                  width="15"
+                />
+              </div>
+            </div>
+          </label>
+          <label for="quantidade">
+            Quantidade Minima
+            <div class="container_quantidade">
+              <div class="mais">
+                <img
+                src="../../../../assets/svg/menor_modal.svg"
+                alt="mais_modal"
+                  width="15"
+                />
+              </div>
+
+              <input
+                type="text"
+                id="quantidade"
+                class="quantidade"
+                [(ngModel)]="quantidadeMinima"
+                placeholder=""
+              />
+
+              <div class="mais">
+                <img
+                  src="../../../../assets/svg/mais_modal.svg"
+                  alt="mais_modal"
+                  width="15"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class="quantidadeInputs">
+          <label for="quantidade">
+            Valor de Compra
+            <div class="container_quantidade">
+              <div class="mais">
+                <img
+                src="../../../../assets/svg/menor_modal.svg"
+                alt="mais_modal"
+                  width="15"
+                />
+              </div>
+
+              <input
+                type="text"
+                id="quantidade"
+                class="quantidade"
+                [(ngModel)]="ValorCompra"
+                placeholder=""
+              />
+
+              <div class="mais">
+                <img
+                  src="../../../../assets/svg/mais_modal.svg"
+                  alt="mais_modal"
+                  width="15"
+                />
+              </div>
+            </div>
+          </label>
+          <label for="quantidade">
+            Valor de Venda
+            <div class="container_quantidade">
+              <div class="mais">
+                <img
+                src="../../../../assets/svg/menor_modal.svg"
+                alt="mais_modal"
+                  width="15"
+                />
+              </div>
+
+              <input
+                type="text"
+                id="quantidade"
+                class="quantidade"
+                [(ngModel)]="ValorVenda"
+                placeholder=""
+              />
+
+              <div class="mais">
+                <img
+                  src="../../../../assets/svg/mais_modal.svg"
+                  alt="mais_modal"
+                  width="15"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <button (click)="adicionarProduto()">Adicionar Produto</button>
+      </div>
+
+      <div>
+        <img src="../../../../assets/svg/persona-login.svg" alt="">
+      </div>
+    </div>
+  </div>
+</div>

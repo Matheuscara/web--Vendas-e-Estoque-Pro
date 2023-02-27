@@ -13,6 +13,7 @@ import { AppState } from 'src/app/shared/state/reducer';
 export class EstoqueComponent implements OnInit {
   produtos$: Observable<any>;
   produtos: any;
+  modal = false;
 
   constructor(
     private store: Store<AppState>,
@@ -36,5 +37,10 @@ export class EstoqueComponent implements OnInit {
     return this.datePipe
       .transform(date, 'dd/MM/yyyy HH:mm:ss')
       ?.replace(' ', ' - ');
+  }
+
+  comportamentoModal() {
+    this.modal = this.modal ? false : true
+    console.log(this.modal)
   }
 }
