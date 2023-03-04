@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/shared/services/login';
@@ -11,6 +12,8 @@ export class LoginComponent {
   email: string = '';
   senha: string = '';
   nome: string = '';
+  invalidEmail: boolean = false;
+  invalidPassword: boolean = false;
 
   stateLogin: boolean = true;
 
@@ -20,6 +23,15 @@ export class LoginComponent {
     this.loginService.login(this.email, this.senha).subscribe((data: any) => {
       localStorage.setItem('token', data.token);
       this.router.navigate(['/estoque']);
+    },(error: HttpErrorResponse) => {
+      if(error.error.message === 'Email nao encontrado') {
+        this.invalidEmail = true
+        this.invalidPassword = false
+
+      } else {
+        this.invalidEmail = true
+        this.invalidPassword = true
+      }
     });
   }
 

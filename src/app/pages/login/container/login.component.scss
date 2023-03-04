@@ -81,6 +81,10 @@
     font-size: 25px;
     line-height: 35px;
 
+    .invalidInput {
+      border: 1px red solid;
+    }
+
     input {
       padding: 10px 20px;
       border: none;

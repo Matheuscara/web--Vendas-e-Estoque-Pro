@@ -19,8 +19,8 @@
     <div *ngIf="stateLogin" class="login">
       Login
       <div>
-        <input type="text" [(ngModel)]="email" placeholder="E-mail" />
-        <input type="password" [(ngModel)]="senha" placeholder="Senha" />
+        <input [ngClass]="{ invalidInput: invalidEmail }" type="text" [(ngModel)]="email" placeholder="E-mail" />
+        <input [ngClass]="{ invalidInput: invalidPassword }" type="password" [(ngModel)]="senha" placeholder="Senha" />
 
         <span>Esqueceu a senha?</span>
 

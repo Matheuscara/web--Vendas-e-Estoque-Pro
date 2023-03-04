@@ -41,6 +41,5 @@ export class EstoqueComponent implements OnInit {
 
   comportamentoModal() {
     this.modal = this.modal ? false : true
-    console.log(this.modal)
   }
 }

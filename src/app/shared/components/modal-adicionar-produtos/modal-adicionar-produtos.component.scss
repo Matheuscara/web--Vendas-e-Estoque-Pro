@@ -9,6 +9,8 @@
   justify-content: center;
   background-color: rgba(82, 82, 82, 0.514); /* fundo escuro */
   z-index: 999; /* definindo a ordem em que o modal aparece na tela */
+  animation: modal-show 0.7s ease-in-out forwards;
+
 }
 
 .modal-content {
@@ -137,4 +139,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+
+
+@keyframes modal-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
